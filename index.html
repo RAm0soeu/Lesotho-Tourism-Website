@@ -1,102 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kingdom of Lesotho - Tourism</title>
-    
+    <meta name="description" content="Discover Lesotho's mountain scenery, Basotho culture, waterfalls and unforgettable travel experiences.">
+    <title>Lesotho Tourism | Discover the Kingdom in the Sky</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark site-navbar fixed-top">
             <div class="container">
-                <a class="navbar-brand fw-bold" href="index.html">Lesotho Tourism</a>
+                <a class="navbar-brand fw-bold" href="index.html"><span class="brand-mark">L</span> Lesotho Tourism</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
-                   
-                    <button id="themeToggle" class="btn btn-outline-light ms-3 btn-sm">🌙 Dark Mode</button>
+                    <button id="themeToggle" class="btn btn-outline-light btn-sm ms-lg-3 mt-3 mt-lg-0" type="button">🌙 Dark Mode</button>
                 </div>
             </div>
         </nav>
     </header>
 
-   
-    <main class="mt-5 pt-4">
-        
-      
-        <section class="py-5 text-center container-fluid bg-primary text-white jumbotron">
-            <div class="row py-lg-5">
-                <div class="col-lg-6 col-md-8 mx-auto">
-                    <h1 class="fw-bold display-4">Discover the Kingdom in the Sky</h1>
-                    <p class="lead text-light">Experience breathtaking mountains, rich Basotho culture, and unforgettable adventures in Lesotho.</p>
-                    <p>
-                        <a href="services.html" class="btn btn-light btn-lg my-2 text-primary fw-bold">Explore Destinations</a>
-                        <a href="contact.html" class="btn btn-outline-light btn-lg my-2">Book a Trip</a>
-                    </p>
+    <main>
+        <section class="home-hero">
+            <div class="container hero-content">
+                <span class="hero-eyebrow">WELCOME TO THE KINGDOM IN THE SKY</span>
+                <h1>Find your adventure<br>in the heart of <span>Lesotho.</span></h1>
+                <p>From dramatic mountain passes to rich Basotho traditions, discover a destination unlike any other.</p>
+                <div class="hero-actions">
+                    <a href="services.html" class="btn btn-gold btn-lg">Explore destinations <span aria-hidden="true">→</span></a>
+                    <a href="contact.html" class="btn btn-outline-light btn-lg">Plan your trip</a>
+                </div>
+                <div class="hero-note"><span class="hero-dot"></span> Mountain views. Living culture. Unforgettable journeys.</div>
+            </div>
+            <a class="scroll-cue" href="#discover" aria-label="Scroll to discover">↓</a>
+        </section>
+
+        <section class="container section-space">
+            <div class="section-heading text-center">
+                <span class="section-kicker">PLACES TO EXPERIENCE</span>
+                <h2>Discover the beauty of Lesotho</h2>
+                <p>Every journey brings a new view, a new story and a reason to explore further.</p>
+            </div>
+            <div class="row g-4 destination-grid">
+                <div class="col-md-4">
+                    <article class="card destination-card h-100">
+                        <img src="maletsunyane.jpeg" class="card-img-top" alt="Maletsunyane Falls surrounded by the mountains near Semonkong">
+                        <div class="card-body"><span class="destination-tag">NATURE</span><h3 class="card-title">Maletsunyane Falls</h3><p class="card-text">Take in the dramatic beauty of one of Lesotho's best-known waterfalls near Semonkong.</p><a href="services.html" class="text-link">Discover this experience <span aria-hidden="true">→</span></a></div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="card destination-card h-100">
+                        <img src="maluti.jpeg" class="card-img-top" alt="Green mountain scenery and winding highland roads in Lesotho">
+                        <div class="card-body"><span class="destination-tag">ADVENTURE</span><h3 class="card-title">Maloti Mountains</h3><p class="card-text">Enjoy sweeping highland views, scenic drives and outdoor adventures in the mountains.</p><a href="gallery.html" class="text-link">View the gallery <span aria-hidden="true">→</span></a></div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="card destination-card h-100">
+                        <img src="basotho.jpeg" class="card-img-top" alt="Basotho horse riders wearing traditional clothing">
+                        <div class="card-body"><span class="destination-tag">CULTURE</span><h3 class="card-title">Basotho Heritage</h3><p class="card-text">Explore the traditions, crafts, clothing and welcoming spirit that make Lesotho special.</p><a href="about.html" class="text-link">Discover our heritage <span aria-hidden="true">→</span></a></div>
+                    </article>
+                </div>
+            </div>
+            <div class="text-center mt-5"><a href="services.html" class="btn btn-dark btn-lg px-4">View all experiences</a></div>
+        </section>
+
+        <section class="culture-banner">
+            <div class="container py-5">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-8"><span class="section-kicker text-gold">MORE THAN A DESTINATION</span><h2>Come for the views. Leave with a story.</h2><p class="mb-0">Whether you are seeking peaceful scenery, cultural discovery or an exciting highland journey, Lesotho is ready to welcome you.</p></div>
+                    <div class="col-lg-4 text-lg-end"><a href="contact.html" class="btn btn-gold btn-lg">Start planning <span aria-hidden="true">→</span></a></div>
                 </div>
             </div>
         </section>
-
-       
-        <section class="container py-5">
-            <h2 class="text-center mb-4 fw-bold">Top Attractions</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm custom-card">
-                        <div class="card-body">
-                            <h3 class="card-title h5">Sani Pass</h3>
-                            <p class="card-text">Breathtaking views and the highest pub in Africa, winding down the dramatic Drakensberg escarpment.</p>
-                            <a href="services.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm custom-card">
-                        <div class="card-body">
-                            <h3 class="card-title h5">Maletsunyane Falls</h3>
-                            <p class="card-text">One of the highest single-drop waterfalls in Africa, located in Semonkong, offering thrilling abseiling.</p>
-                            <a href="services.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm custom-card">
-                        <div class="card-body">
-                            <h3 class="card-title h5">Thaba Bosiu</h3>
-                            <p class="card-text">A historical mountain plateau rich in culture, serving as the birthplace of the Basotho nation.</p>
-                            <a href="services.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </main>
 
-    
-    <footer class="bg-dark text-white text-center py-4 mt-5">
-        <div class="container">
-            <p class="mb-0">&copy; 2026 Lesotho Tourism Project. All rights reserved.</p>
-        </div>
+    <footer class="site-footer text-center py-4">
+        <div class="container"><a class="footer-brand" href="index.html">Lesotho Tourism</a><p class="mb-1">Discover the Kingdom in the Sky.</p><small>© 2026 Lesotho Tourism Project. All rights reserved.</small></div>
     </footer>
 
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>

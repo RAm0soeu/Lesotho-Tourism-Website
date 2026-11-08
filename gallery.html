@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Gallery - Kingdom of Lesotho Tourism</title>
-    
+    <!-- Bootstrap 5 CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-   
+    <!-- Header & Navigation -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container">
@@ -33,10 +33,10 @@
         </nav>
     </header>
 
-   
+    <!-- Main Content Area -->
     <main class="mt-5 pt-4">
         
-      
+        <!-- Page Header -->
         <section class="py-5 bg-light text-center">
             <div class="container">
                 <h1 class="fw-bold display-5">Lesotho Photo Gallery</h1>
@@ -44,7 +44,7 @@
             </div>
         </section>
 
-       
+        <!-- Bootstrap Carousel Section -->
         <section class="container py-4">
             <div id="galleryCarousel" class="carousel slide shadow rounded overflow-hidden" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -54,21 +54,21 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <Image src="maluti.jpeg" class="d-block w-100 carousel-img" alt="Maluti" />
+                        <img src="maluti.jpeg" class="d-block w-100 carousel-img" alt="Maloti Mountains Landscape">
                         <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
                             <h5>The Maloti Mountain Ranges</h5>
                             <p>Panoramic views across the dramatic peaks and deep green valleys of the Kingdom in the Sky.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <Image src="maletsunyane.jpeg" class="d-block w-100 carousel-img" alt="Maletsunyane" />
+                        <img src="maletsunyane.jpeg" class="d-block w-100 carousel-img" alt="Maletsunyane Waterfalls">
                         <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
                             <h5>Maletsunyane Waterfalls</h5>
                             <p>A breathtaking drop cascading down sheer basalt cliffs near Semonkong.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <Image src="basotho.jpeg" class="d-block w-100 carousel-img" alt="Basotho" />
+                        <img src="basotho.jpeg" class="d-block w-100 carousel-img" alt="Basotho Horsemen">
                         <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
                             <h5>Traditional Pony Trekking</h5>
                             <p>Local horsemen traversing highland trails wrapped in classic Basotho blankets.</p>
@@ -86,13 +86,13 @@
             </div>
         </section>
 
-        
+        <!-- Interactive Lightbox Grid -->
         <section class="container py-5">
             <h2 class="text-center mb-4 fw-bold">Explore Destination Photos</h2>
             <div class="row g-4">
                 <div class="col-md-6">
                     <div class="card custom-card shadow-sm">
-                        <img src="snow.jpeg" class="card-img-top gallery-preview" alt="Snow" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="previewImage(this)" />
+                        <img src="snow.jpeg" class="card-img-top gallery-preview" alt="Maloti Mountains Landscape" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="previewImage(this)">
                         <div class="card-body">
                             <p class="card-text fw-bold text-center">Maloti Mountain Ranges</p>
                         </div>
@@ -100,7 +100,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="card custom-card shadow-sm">
-                        <img src="mal2.jpeg" class="card-img-top gallery-preview" alt="mal2" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="previewImage(this)" />
+                        <img src="mal2.jpeg" class="card-img-top gallery-preview" alt="Maletsunyane Waterfalls" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="previewImage(this)">
                         <div class="card-body">
                             <p class="card-text fw-bold text-center">Maletsunyane Waterfalls</p>
                         </div>
@@ -108,7 +108,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="card custom-card shadow-sm">
-                        <img src="basotho.jpeg" class="card-img-top gallery-preview" alt="Basotho" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="previewImage(this)" />
+                        <img src="basotho.jpeg" class="card-img-top gallery-preview" alt="Basotho Horsemen" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="previewImage(this)">
                         <div class="card-body">
                             <p class="card-text fw-bold text-center">Traditional Pony Trekking</p>
                         </div>
@@ -116,7 +116,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="card custom-card shadow-sm">
-                        <img src="sani pass.jpg" class="card-img-top gallery-preview" alt="Sani Pass" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="previewImage(this)" />
+                        <img src="sani pass.jpg" class="card-img-top gallery-preview" alt="Sani Pass Winding Road" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="previewImage(this)">
                         <div class="card-body">
                             <p class="card-text fw-bold text-center">Sani Pass Winding Road</p>
                         </div>
@@ -125,7 +125,7 @@
             </div>
         </section>
 
-        
+        <!-- Bootstrap Modal for Image Lightbox -->
         <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
@@ -142,16 +142,16 @@
 
     </main>
 
-    
+    <!-- Footer -->
     <footer class="bg-dark text-white text-center py-4 mt-5">
         <div class="container">
             <p class="mb-0">&copy; 2026 Lesotho Tourism Project. All rights reserved.</p>
         </div>
     </footer>
 
-   
+    <!-- Bootstrap 5 JS Bundle CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
+    <!-- Custom JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>

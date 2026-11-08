@@ -1,17 +1,87 @@
-
-.carousel-img {
-    height: 450px;
-    object-fit: cover;
+:root {
+    --lesotho-navy: #142b3b;
+    --lesotho-blue: #244f67;
+    --lesotho-gold: #e6b85c;
+    --lesotho-cream: #f7f5ef;
 }
 
-/* Lightbox preview image styling */
-.gallery-preview {
-    height: 220px;
-    object-fit: cover;
-    cursor: pointer;
-    transition: filter 0.3s ease;
+html { scroll-behavior: smooth; }
+body { padding-top: 70px; }
+.site-navbar { background: rgba(15, 34, 47, .97); box-shadow: 0 5px 24px rgba(0,0,0,.12); min-height: 70px; }
+.navbar-brand { letter-spacing: .2px; }
+.brand-mark { display: inline-grid; place-items: center; width: 32px; height: 32px; margin-right: 5px; border-radius: 9px; color: var(--lesotho-navy); background: var(--lesotho-gold); font-weight: 800; }
+.site-navbar .nav-link { color: rgba(255,255,255,.78); padding-left: .85rem !important; padding-right: .85rem !important; transition: color .2s ease; }
+.site-navbar .nav-link:hover, .site-navbar .nav-link.active { color: var(--lesotho-gold); }
+
+.home-hero {
+    min-height: 690px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: #fff;
+    background-image: linear-gradient(90deg, rgba(8,24,36,.84) 0%, rgba(8,24,36,.58) 48%, rgba(8,24,36,.16) 100%), linear-gradient(0deg, rgba(8,24,36,.35), transparent 45%), url("maluti.jpeg");
+    background-size: cover;
+    background-position: center 48%;
+}
+.hero-content { position: relative; z-index: 1; padding-top: 65px; padding-bottom: 65px; }
+.hero-eyebrow, .section-kicker { display: inline-block; color: var(--lesotho-gold); font-size: .76rem; font-weight: 800; letter-spacing: .17em; margin-bottom: 17px; }
+.home-hero h1 { max-width: 780px; font-size: clamp(2.8rem, 6vw, 5.4rem); font-weight: 800; line-height: 1.04; letter-spacing: -.045em; margin-bottom: 22px; }
+.home-hero h1 span { color: var(--lesotho-gold); }
+.home-hero p { max-width: 590px; color: rgba(255,255,255,.9); font-size: clamp(1.05rem, 2vw, 1.25rem); line-height: 1.7; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.btn-gold { background: var(--lesotho-gold); color: #182c39; border: 1px solid var(--lesotho-gold); font-weight: 750; }
+.btn-gold:hover { background: #f0ca7d; border-color: #f0ca7d; color: #142b3b; transform: translateY(-2px); }
+.hero-note { display: flex; align-items: center; gap: 10px; margin-top: 38px; color: rgba(255,255,255,.82); font-size: .9rem; }
+.hero-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--lesotho-gold); box-shadow: 0 0 0 5px rgba(230,184,92,.18); }
+.scroll-cue { position: absolute; bottom: 22px; left: 50%; transform: translateX(-50%); color: #fff; font-size: 1.8rem; text-decoration: none; opacity: .8; }
+.welcome-strip { background: var(--lesotho-cream); color: #203644; }
+.welcome-item { display: flex; justify-content: center; align-items: center; gap: 13px; text-align: left; }
+.welcome-item > span { font-size: 1.8rem; }
+.welcome-item strong, .welcome-item small { display: block; }
+.welcome-item strong { font-size: .98rem; }
+.welcome-item small { color: #687680; font-size: .82rem; margin-top: 2px; }
+.section-space { padding-top: 88px; padding-bottom: 88px; }
+.section-heading { max-width: 690px; margin: 0 auto 42px; }
+.section-heading h2 { color: var(--lesotho-navy); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; letter-spacing: -.035em; }
+.section-heading p { color: #71808a; font-size: 1.05rem; }
+.destination-card { overflow: hidden; border: 0; border-radius: 16px; box-shadow: 0 12px 35px rgba(20,43,59,.09); transition: transform .25s ease, box-shadow .25s ease; }
+.destination-card:hover { transform: translateY(-7px); box-shadow: 0 18px 42px rgba(20,43,59,.16); }
+.destination-card .card-img-top { height: 235px; object-fit: cover; }
+.destination-card .card-body { padding: 25px; }
+.destination-tag { color: #9a6c19; background: #fbf1dc; border-radius: 30px; padding: 5px 10px; font-size: .68rem; font-weight: 800; letter-spacing: .1em; }
+.destination-card .card-title { color: var(--lesotho-navy); font-weight: 800; margin-top: 14px; }
+.destination-card .card-text { color: #687680; line-height: 1.65; }
+.text-link { color: #245a75; font-weight: 750; text-decoration: none; }
+.text-link:hover { color: #a87822; }
+.culture-banner { background: var(--lesotho-navy); color: #fff; }
+.culture-banner h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; letter-spacing: -.035em; }
+.culture-banner p { color: rgba(255,255,255,.76); font-size: 1.05rem; max-width: 720px; }
+.text-gold { color: var(--lesotho-gold); }
+.site-footer { background: #0d202d; color: rgba(255,255,255,.7); }
+.footer-brand { color: #fff; font-weight: 800; font-size: 1.15rem; text-decoration: none; }
+.site-footer p { font-size: .9rem; margin-top: 5px; }
+
+/* Existing gallery styles */
+.carousel-img { height: 450px; object-fit: cover; }
+.gallery-preview { height: 220px; width: 100%; object-fit: cover; cursor: pointer; transition: filter .3s ease, transform .3s ease; }
+.gallery-preview:hover { filter: brightness(.9); transform: scale(1.015); }
+.custom-card { border: 0; border-radius: 12px; overflow: hidden; transition: transform .2s ease, box-shadow .2s ease; }
+.custom-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(0,0,0,.12) !important; }
+
+@media (max-width: 767.98px) {
+    body { padding-top: 66px; }
+    .home-hero { min-height: 620px; background-position: 58% center; }
+    .home-hero h1 { font-size: clamp(2.65rem, 12vw, 4rem); }
+    .hero-actions .btn { width: 100%; }
+    .welcome-item { justify-content: flex-start; max-width: 240px; margin: 0 auto; }
+    .section-space { padding-top: 65px; padding-bottom: 65px; }
+    .destination-card .card-img-top { height: 220px; }
+    .carousel-img { height: 280px; }
 }
 
-.gallery-preview:hover {
-    filter: brightness(0.9);
-}
+html[data-bs-theme="dark"] .welcome-strip { background: #182a35; color: #f4f1e9; }
+html[data-bs-theme="dark"] .welcome-item small { color: #bdc8ce; }
+html[data-bs-theme="dark"] .section-heading h2, html[data-bs-theme="dark"] .destination-card .card-title { color: #f1f4f5; }
+html[data-bs-theme="dark"] .section-heading p, html[data-bs-theme="dark"] .destination-card .card-text { color: #c0cbd1; }
+html[data-bs-theme="dark"] .destination-card { background: #203541; }
+html[data-bs-theme="dark"] .text-link { color: #f0c56f; }
