@@ -1,0 +1,17 @@
+
+.carousel-img {
+    height: 450px;
+    object-fit: cover;
+}
+
+/* Lightbox preview image styling */
+.gallery-preview {
+    height: 220px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+.gallery-preview:hover {
+    filter: brightness(0.9);
+}
